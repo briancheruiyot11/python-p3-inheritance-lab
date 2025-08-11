@@ -2,7 +2,12 @@
 
 from user import User
 
+# Student class inherits from User
 class Student(User):
-    
-    def learn(self):
-        pass
+    def __init__(self, first_name, last_name):
+        super().__init__(first_name, last_name)
+        self.knowledge = []
+
+# Learn a piece of knowledge
+    def learn(self, info):
+        self.knowledge.append(info)
